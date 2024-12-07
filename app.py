@@ -6,6 +6,9 @@ app = Flask(__name__)
 def hello_world():
     return render_template('home.html')
 
+@app.route('/explore')
+def explore_site():
+    return render_template('explore.html')
 
 
 
