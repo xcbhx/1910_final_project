@@ -11,6 +11,13 @@ def explore_site():
     return render_template('explore.html')
 
 
+@app.route('/signin')
+def sign_in():
+    return render_template('signin.html')
+
+
+
+
 
 if __name__ == '__main__':
     app.config['ENV'] = 'development'
