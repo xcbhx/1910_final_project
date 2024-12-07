@@ -16,6 +16,10 @@ def sign_in():
     return render_template('signin.html')
 
 
+@app.route('/join')
+def join_membership():
+    return render_template('join.html')
+
 
 
 
