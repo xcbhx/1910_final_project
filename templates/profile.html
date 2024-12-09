@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindingMe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <img src="/static/landingpageimg.png" alt="Page icon" width="100" height="100">
+        <a href="/aboutus">About Us</a>
+        <a href="/home">Home</a>
+        <a href="/playlist">Playlist</a>
+    </nav>
+
+    <main>
+        <h1>“I AM WORTHY OF HAVING “ME” TIME, WITHOUT FEELING GUILTY”</h1>
+
+        <h4>Welcome {{ Username }},</h4>
+        <form action="/profile" method="POST">
+            <h4>How are you feeling today?</h4>
+            <label for="feeling_ready">Ready</label>
+            <input type="radio" id="feeling_ready" name="user" value="Ready">
+            <label for="feeling_tired">Tired</label>
+            <input type="radio" id="feeling_tired" name="user" value="Tired">
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if user == 'Ready' %}
+            <p>"You're stronger than you know, and today 
+                is the perfect day to prove it to yourself. Let's go!"
+            </p>
+        {% elif user == 'Tired' %}
+            <p>"You may be tired, but every small step forward is proof 
+                of your strength. Rest if you need, but don’t forget how 
+                far you’ve come."
+            </p>
+        {% endif %}
+
+    </main>
+
+
+    <footer>
+        <p>
+            © FindingMe 2024
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

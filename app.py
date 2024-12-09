@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -20,7 +20,18 @@ def sign_in():
 def join_membership():
     return render_template('join.html')
 
+@app.route('/profile', methods=['GET','POST'])
+def user_profile():
+    user_response = None
+    if request.method == 'POST':
+        user_response = request.form.get('user') # Fetch the value of the selected radio button
 
+    context = {
+        'username': 'Ceina Ellison',
+        'user': user_response
+    }
+
+    return render_template('profile.html', **context)
 
 
 if __name__ == '__main__':
