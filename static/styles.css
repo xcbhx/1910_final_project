@@ -1,0 +1,18 @@
+.logo_img {
+    margin: 10%;
+    margin-bottom: 0%;
+}
+
+#sign_in_h1, #sign_in_h4 {
+    margin: 8%;
+}
+
+#sign_in_btn {
+    margin-top: 5%;
+    width: 50%;
+    background-color: #5598B6;
+    text-align: center;
+    color: white;
+    text-decoration: dotted;
+}
+
