@@ -1,3 +1,4 @@
+/* Sign In */
 .logo_img {
     margin: 10%;
     margin-bottom: 0%;
@@ -7,12 +8,34 @@
     margin: 8%;
 }
 
-#sign_in_btn {
+.button {
     margin-top: 5%;
     width: 50%;
     background-color: #5598B6;
     text-align: center;
     color: white;
-    text-decoration: dotted;
 }
 
+
+/* Join */
+#membership {
+    /* text-align: center; */
+    margin-top: 10%;
+}
+
+#join_h1 {
+    margin: 8%;
+}
+
+.membership_h {
+    color: #5598B6;
+    font-weight: bold;
+}
+
+.monthly {
+    font-weight: 600;
+}
+
+.daily {
+    font-weight: 500;
+}
