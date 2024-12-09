@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FindingMe</title>
-</head>
-<body>
-    <div id="img1">
-        <img src="/static/landingpageimg.png" alt="Page icon" width="100" height="100">
+
+
+{% block content%}
+    <div class="text-center">
+        <div>
+            <img src="/static/landingpageimg.png" alt="Page icon" width="100" height="100">
+            <h1>Welcome to FindingMe!</h1>
+        </div>
+        <div>
+            <img src="{{ url_for('static', filename='postpartum-workouts-01.webp') }}" alt="Women stretching" width="500" height="400">
+        </div>
+        <p> A space for postpartum moms to rediscover balance and well-being.<br> <br>
+            <strong>FindingMe</strong> is your companion on the journey to physical and mental rejuvenation. 
+            Whether you're ready to ease into workouts, practice mindfulness, or simply take a moment to breathe, 
+            we’re here for you.<br>
+            <br>Join us today and take the first step toward reclaiming your time, energy, and peace.
+        </p>
+        <a href="/explore"><button>EXPLORE SITE</button></a>
     </div>
-    <h1>Welcome to FindingMe!</h1>
-    <div id="img2">
-        <img src="static/postpartum-workouts-01.webp" alt="Women stretching" width="500" height="400">
-    </div>
-    <p> A space for postpartum moms to rediscover balance and well-being.<br> <br><strong>FindingMe</strong> is your companion on the journey to physical and mental rejuvenation. 
-        Whether you're ready to ease into workouts, practice mindfulness, or simply take a moment to breathe, we’re here for you.<br>
-        <br>Join us today and take the first step toward reclaiming your time, energy, and peace.
-    </p>
-    <a href="/explore"><button>EXPLORE SITE</button></a>
-</body>
+{% endblock%}
