@@ -1,17 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-        <h1>“I AM WORTHY OF HAVING “ME” TIME, WITHOUT FEELING GUILTY”</h1>
+        <h3 class="quote">“I AM WORTHY OF HAVING “ME” TIME, WITHOUT FEELING GUILTY”</h3>
 
-        <h4>Welcome {{ Username }},</h4>
-        <form action="/profile" method="POST">
-            <h4>How are you feeling today?</h4>
-            <label for="feeling_ready">Ready</label>
-            <input type="radio" id="feeling_ready" name="user" value="Ready">
-            <label for="feeling_tired">Tired</label>
-            <input type="radio" id="feeling_tired" name="user" value="Tired">
-            <button type="submit">Submit</button>
-        </form>
+        <h4>Welcome {{ username }},</h4>
+        <div class="form_feeling">
+            <form action="/profile" method="POST">
+                <h4>How are you feeling today?</h4>
+                <div class="radio_group">
+                    <label for="feeling_ready">Ready</label>
+                    <input type="radio" id="feeling_ready" name="user" value="Ready">
+                    <label for="feeling_tired">Tired</label>
+                    <input type="radio" id="feeling_tired" name="user" value="Tired">
+                </div>
+                <button type="submit" class="button">Check In</button>
+            </form>
+        </div>
 
         {% if user == 'Ready' %}
             <p>"You're stronger than you know, and today 

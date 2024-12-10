@@ -39,3 +39,20 @@
 .daily {
     font-weight: 500;
 }
+
+
+/* Profile */
+.quote {
+    margin: 10%;
+    text-align: center;
+}
+
+.form_feeling {
+    text-align: center;
+    margin: 10%;
+}
+
+.radio_group {
+    display: flex;
+    flex-direction: column;
+}

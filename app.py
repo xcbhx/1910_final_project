@@ -33,7 +33,7 @@ def user_profile():
         user_response = request.form.get('user') # Fetch the value of the selected radio button
 
     context = {
-        'username': 'Ceina Ellison',
+        'username': 'Ceina',
         'user': user_response,
         'logged_in': logged_in
     }
