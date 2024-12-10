@@ -44,6 +44,12 @@ def user_profile():
 def movement():
     return render_template('movement.html')
 
+
+@app.route('/video_detail')
+def video():
+    return render_template('video_detail.html')
+
+
 if __name__ == '__main__':
     app.config['ENV'] = 'development'
     app.run(debug=True)
