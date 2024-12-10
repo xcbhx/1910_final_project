@@ -9,36 +9,42 @@
     </head>
     <body>
         <!-- Navbar -->
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
             <div class="container-fluid">
+                <!-- Logo -->
                 <a class="navbar-brand" href="/">
-                    <img src="{{ url_for('static', filename='landingpageimg.png') }}" alt="Page icon" width="50" height="50">
+                    <img src="{{ url_for('static', filename='landingpageimg.png') }}" alt="Page icon" width="60" height="60">
                 </a>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Toggle Button for Mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="/explore">Explore</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/aboutus">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/profile?logged_in={{ 'true' if logged_in else 'false' }}">Profile</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/movement">Movement</a></li>
+                        <li class="nav-item navbar-brand mb-0"><a class="nav-link" href="/aboutus">About Us</a></li>
+                        <li class="nav-item navbar-brand mb-0"><a class="nav-link" href="/profile?logged_in={{ 'true' if logged_in else 'false' }}">Profile</a></li>
+                        <li class="nav-item navbar-brand mb-0"><a class="nav-link" href="/movement">Movement</a></li>
                         {% if not logged_in and request.path == '/explore' %}
-                        <li class="nav-item"><a class="nav-link" href="/signin">Sign In</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/join">Join</a></li>
+                        <li class="nav-item navbar-brand mb-0"><a class="nav-link" href="/explore">Explore</a></li>
+                        <li class="nav-item navbar-brand mb-0"><a class="nav-link" href="/signin">Sign In</a></li>
+                        <li class="nav-item navbar-brand mb-0"><a class="nav-link" href="/join">Join</a></li>
                         {% endif %}
                     </ul>
                 </div>
             </div>
-         </nav>
+        </nav>
 
-         <!-- Main Content -->
+        <!-- Main Content -->
         <main class="container">
             {% block content %}
             {% endblock %}
         </main>
+        
         <!-- Footer -->
         <footer class="bg-light text-center py-3 mt-4">
             <p>© FindingMe 2024</p>
         </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
