@@ -40,6 +40,9 @@ def user_profile():
 
     return render_template('profile.html', **context)
 
+@app.route('/movement')
+def movement():
+    return render_template('movement.html')
 
 if __name__ == '__main__':
     app.config['ENV'] = 'development'
