@@ -52,11 +52,31 @@
 .form_feeling {
     text-align: center;
     margin: 10%;
+    background-image: url("/static/createdbymomsformamas.webp");
+    background-size: cover;
+    background-position: center;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 5px 9px #5598B6;
+    color: #080808;
 }
+
+
+.form_feeling form {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+}
+
 
 .radio_group {
     display: flex;
     flex-direction: column;
+}
+
+.display_feeling {
+    text-align: center;
+    margin-bottom: 15%;
 }
 
 

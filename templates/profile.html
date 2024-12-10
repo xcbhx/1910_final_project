@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-        <h3 class="quote">“I AM WORTHY OF HAVING “ME” TIME, WITHOUT FEELING GUILTY”</h3>
+        <h3 class="quote">“I am worthy of having "ME” time, without feeling guilty.</h3>
 
         <h4>Welcome {{ username }},</h4>
         <div class="form_feeling">
@@ -18,11 +18,11 @@
         </div>
 
         {% if user == 'Ready' %}
-            <p>"You're stronger than you know, and today 
+            <p class="display_feeling">"You're stronger than you know, and today 
                 is the perfect day to prove it to yourself. Let's go!"
             </p>
         {% elif user == 'Tired' %}
-            <p>"You may be tired, but every small step forward is proof 
+            <p class="display_feeling">"You may be tired, but every small step forward is proof 
                 of your strength. Rest if you need, but don’t forget how 
                 far you’ve come."
             </p>
