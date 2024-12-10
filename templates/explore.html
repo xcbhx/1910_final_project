@@ -1,103 +1,179 @@
 {% extends 'base.html' %}
 
-    {% block content %}
-        <div>
-            <h2>Welcome to your journey of rediscovery and empowerment!</h2>
-            <p>This is more than just a workout page—it's a space for postpartum moms to reconnect 
-                with themselves, one movement at a time.<br>
-                Whether you're easing back into fitness or ready to embrace a challenge, each session 
-                is designed to get your blood flowing, boost your energy, and remind you of your inner strength.<br>
-                Through mindful workouts, you'll rebuild your body, reignite your confidence, and create moments of 
-                self-care amidst the demands of motherhood. This is your time to move, breathe, and feel powerful 
-                again—because finding yourself starts with showing up for yourself. Let’s get moving!</p>
-            <a href="/join"><button>Get Started</button></a>
-            <div>
-                <img src="static/womanwbaby.jpg" alt="Woman stretching with baby smiling underneath." width="500" height="500">
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="p-5 border rounded shadow-sm">
+            <div class="row align-items-center">
+                <!-- Left Column: Text -->
+                <div class="col-md-6">
+                    <h2>Welcome to your journey of rediscovery and empowerment!</h2>
+                    <p>
+                        This is more than just a workout page—it's a space for postpartum moms to reconnect 
+                        with themselves, one movement at a time.<br><br>
+                        Whether you're easing back into fitness or ready to embrace a challenge, each session 
+                        is designed to get your blood flowing, boost your energy, and remind you of your inner strength.<br><br>
+                        Through mindful workouts, you'll rebuild your body, reignite your confidence, and create moments of 
+                        self-care amidst the demands of motherhood. This is your time to move, breathe, and feel powerful 
+                        again—because finding yourself starts with showing up for yourself. Let’s get moving!
+                    </p>
+                    <a href="/join">
+                        <button class="button">Get Started</button>
+                    </a>
+                </div>
+    
+                <!-- Right Column: Image -->
+                <div class="col-md-6 text-center">
+                    <img src="{{ url_for('static', filename='womanwbaby.jpg') }}" 
+                        alt="Woman stretching with baby smiling underneath" 
+                        class="img-fluid rounded" 
+                        style="max-width: 100%; height: auto;">
+                </div>
             </div>
         </div>
+    </div>
 
-        <p>“Embrace progress over perfection; every step counts. Your body is a<br>
+        <p class="quote">“Embrace progress over perfection; every step counts. Your body is a<br>
             powerhouse of strength with limitless potential. Rediscover your strength;<br> 
             you're amazing.  Nourish your body and soul; every choice is a step towards a happier you.”
         </p>
 
+
+        <h4>Finding Your Strength: Workout Reels</h4>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active ratio ratio-21x9" >
+                <iframe src="https://www.youtube.com/embed/Rn-l8TlTto0" title="YouTube video" allowfullscreen></iframe>
+              </div>
+              <div class="carousel-item ratio ratio-21x9">
+                <iframe src="https://www.youtube.com/embed/DoIVuR25Yqo" title="YouTube video" allowfullscreen></iframe>
+              </div>
+              <div class="carousel-item ratio ratio-21x9">
+                <iframe src="https://www.youtube.com/embed/k9hRpsrQJDY" title="YouTube video" allowfullscreen></iframe>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
         <div>
-            <h4>Finding Your Strength: Workout Reels</h4>
-            <img src="static/workout2.jpeg" alt="Woman working out">
-            <img src="static/workout2.jpeg" alt="Woman working out">
-            <img src="static/workout2.jpeg" alt="Woman working out">
-            <img src="static/workout2.jpeg" alt="Woman working out">
+            <h4 id="select_membership">Select a membership:</h4>
+            <div class="container my-5">
+                <div class="row">
+                    <!-- Membership 1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="p-3 border rounded shadow-sm">
+                            <img src="{{ url_for('static', filename='membership1.webp') }}" 
+                                alt="Mother holding her baby" 
+                                class="img-fluid rounded" 
+                                style="width: 300px; height: 200px;">
+                            <p class="membership_h">MEMBERSHIP</p>
+                            <p class="monthly">Monthly Subscription</p>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <p>Total</p>
+                                <div>
+                                    <p>Free for 30 Days</p>
+                                    <p>USD $20.00/month</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <a href="/join"><button class="button">Start Free Trial</button></a>
+                            <p class="daily">Daily Investment: $0.67</p>
+                            <p><strong>Includes:</strong></p>
+                            <button class="btn btn-outline-secondary">Show more</button>
+                        </div>
+                    </div>
+            
+                    <!-- Membership 2 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="p-3 border rounded shadow-sm">
+                            <img src="{{ url_for('static', filename='membership2.png') }}" 
+                                alt="Mother working out with baby underneath" 
+                                class="img-fluid rounded" 
+                                style="width: 300px; height: 200px;">
+                            <p class="membership_h">MEMBERSHIP</p>
+                            <p class="monthly">Quarterly Subscription</p>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <p>Total</p>
+                                <div>
+                                    <p>Free for 30 Days</p>
+                                    <p>USD $50.00/quarter</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <a href="/join"><button class="button">Start Free Trial</button></a>
+                            <p class="daily">Daily Investment: $0.56</p>
+                            <p><strong>Includes:</strong></p>
+                            <button class="btn btn-outline-secondary">Show more</button>
+                        </div>
+                    </div>
+            
+                    <!-- Membership 3 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="p-3 border rounded shadow-sm">
+                            <img src="{{ url_for('static', filename='mombabyworkout.webp') }}" 
+                                alt="Mother and son both holding weights" 
+                                class="img-fluid rounded" 
+                                style="width: 300px; height: 200px;">
+                            <p class="membership_h">MEMBERSHIP</p>
+                            <p class="monthly">Annual Subscription</p>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <p>Total</p>
+                                <div>
+                                    <p>Free for 30 Days</p>
+                                    <p>USD $150.00/year</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <a href="/join"><button class="button">Start Free Trial</button></a>
+                            <p class="daily">Daily Investment: $0.42</p>
+                            <p><strong>Includes:</strong></p>
+                            <button class="btn btn-outline-secondary">Show more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div>
-            <h4>Select a membership:</h4>
-            <div>
-                <img src="static/placeholder.png" alt="placeholder" width="200" height="200">
-                <p>MEMBERSHIP</p>
-                <p>Monthly Subscription</p>
-                <p>Total</p>
-                <p>Free for 30 Days</p>
-                <p>USD $20.00/month</p>
-                <a href="/join"><button>Start Free Trail</button></a>
-                <p>Daily Investment: $0.67</p>
-                <p>Includes:</p>
-                <button>Show more</button>
-            </div>
-            <div>
-                <img src="static/placeholder.png" alt="placeholder" width="200" height="200">
-                <p>MEMBERSHIP</p>
-                <p>Quartely Subscription</p>
-                <p>Total</p>
-                <p>Free for 30 Days</p>
-                <p>USD $50.00/quarter</p>
-                <a href="/join"><button>Start Free Trail</button></a>
-                <p>Daily Investment: $0.56</p>
-                <p>Includes:</p>
-                <button>Show more</button>
-            </div>
-            <div>
-                <img src="static/placeholder.png" alt="placeholder" width="200" height="200">
-                <p>MEMBERSHIP</p>
-                <p>Annual Subscription</p>
-                <p>Total</p>
-                <p>Free for 30 Days</p>
-                <p>USD $150.00/year</p>
-                <a href="/join"><button>Start Free Trail</button></a>
-                <p>Daily Investment: $0.42</p>
-                <p>Includes:</p>
-                <button>Show more</button>
-            </div>
-        </div>
-        <div>
             <h4>Our Reviews</h4>
             <p>⭐️ ⭐️ ⭐️ ⭐️ ⭐️ 5.0 rating of 39 reviews</p>
-            <div>
-                <img src="static/placeholder.png" alt="placeholder" width="50" height="50">
+            <div class="reviews">
+                <img src="static/women1.webp" alt="woman" width="150" height="100">
                 <p>Jiulietta B.</p>
                 <p>⭐️ ⭐️ ⭐️ ⭐️ ⭐️</p>
-                <p>My Go-To for Postpartum Wellness!</p>
+                <p class="review_title">My Go-To for Postpartum Wellness!</p>
                 <p>"FindingMe has been a game-changer in my postpartum journey. <br>
                     The workout videos are short but effective, perfect for busy moms. I also <br>
                     love the mindfulness features—they help me de-stress and stay grounded. This app <br>
                     truly cares about moms' well-being!"
                 </p>
             </div>
-            <div>
-                <img src="static/placeholder.png" alt="placeholder" width="50" height="50">
+            <div class="reviews">
+                <img src="static/women2.jpg" alt="woman" width="150" height="100">
                 <p>Jessica M.</p>
                 <p>⭐️ ⭐️ ⭐️ ⭐️ ⭐️</p>
-                <p>A Lifesaver for New Moms!</p>
+                <p class="review_title">A Lifesaver for New Moms!</p>
                 <p>"FindingMe has been such a blessing during my postpartum recovery. The workout <br>
                     previews are simple yet effective, and the mindfulness exercises help me center myself<br>
                     after a long day. It's like having a personal trainer and therapist all in one app. Highly <br>
                     recommend to all moms out there!"
                 </p>
             </div>
-            <div>
-                <img src="static/placeholder.png" alt="placeholder" width="50" height="50">
+            <div class="reviews">
+                <img src="static/women3.jpg" alt="woman" width="150" height="100">
                 <p>Megan R.</p>
                 <p>⭐️ ⭐️ ⭐️ ⭐️ ⭐️</p>
-                <p>Exactly What I Needed!</p>
+                <p class="review_title">Exactly What I Needed!</p>
                 <p>"After giving birth, I struggled to find time for myself. FindingMe has given me that time back. <br>
                     The app is easy to use, and I love how the videos are tailored for postpartum recovery. It’s helped <br>
                     me rebuild my strength and find my confidence again."

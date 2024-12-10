@@ -45,6 +45,8 @@
 .quote {
     margin: 10%;
     text-align: center;
+    font-weight: 800;
+    color: #3a697e;
 }
 
 .form_feeling {
@@ -55,4 +57,21 @@
 .radio_group {
     display: flex;
     flex-direction: column;
+}
+
+
+/* Explore */
+
+#select_membership {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.reviews {
+    text-align: center;
+    margin: 5%;
+}
+
+.review_title {
+    font-weight: 500;
 }
