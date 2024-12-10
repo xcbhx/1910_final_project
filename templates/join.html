@@ -17,22 +17,28 @@
 
                     <form action="/profile" method="POST">
                         <div class="mb-3 row">
-                            <label for="email" class="form-label">Email:</label>
-                            <input type="email" name="email" class="form-control" id="email" required>
+                            <label for="staticEmail" class="col-sm-2 col-form-label" required>Email:</label>
+                            <div class="col-sm-15"> 
+                                <input type="email" class="form-control" id="staticEmail" required>
+                            </div>
                         </div>
                         <div class="mb-3 row">
                             <label for="name" class="form-label">Name:</label>
-                            <input type="text" name="name" class="form-control" id="name" required>
+                            <div class="col-sm-15">
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
                         </div>
                         <div class="mb-3 row">
-                            <label for="password" class="form-label">Password:</label>
-                            <input type="password" name="password" class="form-control" id="password" required>
+                            <label for="inputPassword" class="col-sm-2 col-form-label" required>Password:</label>
+                                <div class="col-sm-15">
+                                    <input type="password" class="form-control" id="inputPassword">
+                                </div>
                         </div>
                         <button type="submit" class="button">Create Account</button>
                     </form>
                 </div>
                 <div class="col-md-6">
-                    <div class="p-4 border rounded shadow-sm">
+                    <div class="p-3 border rounded shadow-sm">
                         <div id="membership">
                             <img src="static/womanstretching.webp" alt="placeholder" width="400" height="250" class="d-block mx-auto mb-3">
                             <p class="membership_h">MEMBERSHIP</p>

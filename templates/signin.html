@@ -15,18 +15,18 @@
             <h4 id="sign_in_h4">Sign in to continue your journey</h4>
 
             <div class="mb-3 row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <label for="staticEmail" class="col-sm-2 col-form-label" required>Email:</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="staticEmail">
+                  <input type="email" class="form-control" id="staticEmail">
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <label for="inputPassword" class="col-sm-2 col-form-label" required>Password:</label>
                 <div class="col-sm-10">
                   <input type="password" class="form-control" id="inputPassword">
                 </div>
             </div>
-            <a href="/profile"><button id="sign_in_btn" type="button">continue</button></a>
+            <a href="/profile"><button class="button" type="button">continue</button></a>
         </div>
     </main>
 </body>
